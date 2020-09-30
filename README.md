@@ -185,10 +185,8 @@ int to_number(int arr[4][4]){
 	// 从左到右，从上至下，按照从1到9递增，1为亿位，……，9为个位
 	int index = 100000000;               
 	long long result = 0;
-	for (int i = 1; i <= 3; i++)
-	{
-		for (int j = 1; j <= 3; j++)
-		{
+	for (int i = 1; i <= 3; i++){
+		for (int j = 1; j <= 3; j++){
 			result += arr[i][j] * index;
 			index /= 10;
 		}
@@ -294,11 +292,11 @@ bool right(int arr[4][4])
 
 int main()
 {
-	int arr[4][4] = {0}; // 存储当前八数码
-	vector<Octal> open; // open表
-	vector<Octal> closed; // closed表
-	int depth; // 深度
-	Octal octal; // 八数码
+	int arr[4][4] = {0}; 
+	vector<Octal> open; 
+	vector<Octal> closed; 
+	int depth; 
+	Octal octal; 
 	cout << "请输入八数码数据，按照从左到右，从上至下的顺序，空格用0代替：" << endl;
 	for (int i = 1; i <= 3; i++){
 		for (int j = 1; j <= 3; j++){
@@ -316,7 +314,7 @@ int main()
 	open.push_back(octal);
 
 	int goal = 123804765; // 最终的八数码值
-	bool flag = false; // 成功解决为true，失败为false
+	bool flag = false; // 
 	Octal temp;
 	int count = 1;
 
